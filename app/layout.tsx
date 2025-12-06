@@ -1,18 +1,14 @@
-import "./globals.css";
-import Header from "./_components/Header";
-import Footer from "./_components/Footer";
-
-export default function RootLayout({
-  children,
-}: Readonly<{
+import Sheet from "@/app/_components/Sheet";
+import Hero from "@/app/_components/Hero";
+type Props = {
   children: React.ReactNode;
-}>) {
+};
+
+export default function RootLayout({ children }: Props) {
   return (
-    <html lang="ja">
-      <body>
-        <Header />
-        {children}
-      </body>
-    </html>
+    <>
+      <Hero title="Members" sub="メンバー" />
+      <Sheet>{children}</Sheet>
+    </>
   );
 }
