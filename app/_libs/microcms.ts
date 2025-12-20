@@ -70,6 +70,11 @@ export type News = {
       endpoint: 'categories',
       contentId: contentId,
       queries: queries,
+      customRequestInit: {
+        next: { 
+          revalidate: queries?.draftKey === undefined ? 60 : 0,
+        },
+      },
     });
     return detailData;
   }
