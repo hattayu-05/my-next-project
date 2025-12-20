@@ -1,18 +1,26 @@
-items {
-    display: flex;
-    color: #fff;
-    gap: 40px;
+.nav {
+  display: flex;
+  align-items: center;
 }
 
-.buton {
-    display: none;
+.items {
+  display: flex;
+  color: #fff;
+  gap: 40px;
+}
+
+.ctaButton {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 @media (max-width: 640px) {
-   .nav {
+  .nav {
     display: none;
-    }
-    .nav.open {
+  }
+  .nav.open {
     display: block;
     position: fixed;
     top: 0;
@@ -20,19 +28,16 @@ items {
     right: 0;
     bottom: 0;
     background-color: var(--color-text-unpainted);
-    padding: 24px 16px; 
-   }
+    padding: 24px 16px;
+  }
 
-   .button {
+  .ctaButton {
     display: flex;
-    background: none;
-    border: none;
-    cursor: pointer;
-   }
+  }
 
-   .close {
+  .close {
     position: absolute;
     top: 24px;
     right: 16px;
-   }
+  }
 }

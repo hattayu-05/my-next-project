@@ -5,5 +5,5 @@ type Props = {
 };
 
 export default function Sheet({ children }: Props) {
-  return <Sheet>{children}</Sheet>;
+  return <div className={styles.container}>{children}</div>;
 }
