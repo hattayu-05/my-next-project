@@ -10,8 +10,6 @@ type Props = {
   searchParams?: {dk?: string };
 };
 
-export const revalidate = 60;
-
 export default async function NewsDetailPage({ params, searchParams }: Props) {
     const data =  await getNewsDetail(params.slug, {draftKey: searchParams?.dk,}).catch(() => notFound());         
   return (
